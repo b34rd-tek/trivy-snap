@@ -1,5 +1,5 @@
 name: trivy
-summary: Vulnerability Scanner 
+summary: Aquasecurity Trivy Vulnerability Scanner 
 description: |
       Find vulnerabilities, misconfigurations, secrets, SBOM in containers, 
       Kubernetes, code repositories, clouds and more
@@ -7,13 +7,13 @@ version: git
 grade: stable
 base: core20
 
-confinement: devmode
+confinement: strict
 
 apps:
   trivy:
     command: bin/trivy
-    plugs:
-      - home
+    plugs: [home, network, network-bind, removable-media]
+
 parts:
   trivy:
     plugin: go
