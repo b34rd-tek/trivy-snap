@@ -10,12 +10,12 @@ base: core20
 confinement: devmode
 
 apps:
-  woke:
+  trivy:
     command: bin/trivy
     plugs:
       - home
 parts:
-  woke:
+  trivy:
     plugin: go
     source-type: git
     source: https://github.com/aquasecurity/trivy
