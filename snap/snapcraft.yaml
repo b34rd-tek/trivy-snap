@@ -12,9 +12,7 @@ confinement: strict
 apps:
   trivy:
     command: bin/trivy
-    plugs:
-      - home
-      - network
+    plugs: [home, network, network-bind, removable-media]
 
 parts:
   trivy:
