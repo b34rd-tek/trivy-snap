@@ -9,16 +9,11 @@ base: core20
 
 confinement: strict
 
-plugs:
-  files:
-    interface: system-files
-    read:
-    - /
-
 apps:
   trivy:
     command: bin/trivy
-    plugs: [home, files, network, network-bind, removable-media]
+    plugs:
+      - home
 
 parts:
   trivy:
