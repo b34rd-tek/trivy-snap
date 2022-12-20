@@ -1,6 +1,8 @@
 <div align="center">
 <img src="https://github.com/aquasecurity/trivy/blob/main/docs/imgs/logo.png" width="200">
 
+[![trivy](https://snapcraft.io/trivy/badge.svg)](https://snapcraft.io/trivy)
+
 [![GitHub Release][release-img]][release]
 [![Test][test-img]][test]
 [![Go Report Card][go-report-img]][go-report]
