@@ -3,7 +3,7 @@ summary: Aquasecurity Trivy Vulnerability Scanner
 description: |
       Find vulnerabilities, misconfigurations, secrets, SBOM in containers, 
       Kubernetes, code repositories, clouds and more
-version: 0.36.1
+version: 0.37.1
 grade: stable
 base: core20
 
