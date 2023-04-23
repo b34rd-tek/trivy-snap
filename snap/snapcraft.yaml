@@ -5,7 +5,7 @@ description: |
       Kubernetes, code repositories, clouds and more
 version: 0.40.0
 grade: stable
-base: core18
+base: core22
 
 architectures:
 - build-on: amd64
@@ -16,10 +16,13 @@ architectures:
 
 confinement: strict
 
+build-snaps:
+  - go
+
 apps:
   trivy:
     command: bin/trivy
-    plugs: [home, network, network-bind, removable-media]
+    plugs: [home, network, network-bind]
 
 parts:
   trivy:
