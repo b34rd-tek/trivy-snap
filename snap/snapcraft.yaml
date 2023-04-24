@@ -8,7 +8,7 @@ grade: stable
 base: core22
 
 architectures:
-- build-on: amd64
+# - build-on: amd64
 - build-on: arm64
 - build-on: armhf
 - build-on: ppc64el
@@ -16,16 +16,12 @@ architectures:
 
 confinement: strict
 
-build-snaps:
-  - go
-
 apps:
   trivy:
-    command: bin/trivy
+    command: trivy
     plugs: [home, network, network-bind]
 
 parts:
   trivy:
-    plugin: go
-    source-type: git
-    source: https://github.com/aquasecurity/trivy
+    plugin: dump
+    source: https://github.com/aquasecurity/trivy/releases/download/v$SNAPCRAFT_PROJECT_VERSION/trivy_$SNAPCRAFT_PROJECT_VERSION_Linux-$SNAPCRAFT_TARGET_ARCH.tar.gz
