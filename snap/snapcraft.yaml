@@ -24,4 +24,4 @@ apps:
 parts:
   trivy:
     plugin: dump
-    source: https://github.com/aquasecurity/trivy/releases/download/v$SNAPCRAFT_PROJECT_VERSION/trivy_$SNAPCRAFT_PROJECT_VERSION_Linux-$SNAPCRAFT_TARGET_ARCH.tar.gz
+    source: https://github.com/james-luther/trivy-snap/releases/download/v$SNAPCRAFT_PROJECT_VERSION/trivy_$SNAPCRAFT_PROJECT_VERSION_Linux-$SNAPCRAFT_TARGET_ARCH.tar.gz
