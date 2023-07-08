@@ -18,7 +18,7 @@ confinement: strict
 apps:
   trivy:
     command: trivy
-    plugs: [home, network, network-bind, kubernetes-support]
+    plugs: [home, network, network-bind]
 
 parts:
   trivy:
