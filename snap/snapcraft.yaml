@@ -17,11 +17,11 @@ architectures:
 confinement: strict
 
 plugs:
-  aws:
+  dot-aws:
     interface: personal-files
     read:
     - $HOME/.aws
-  k8s:
+  dot-k8s:
     interface: personal-files
     read:
     - $HOME/.kube
@@ -29,7 +29,7 @@ plugs:
 apps:
   trivy:
     command: trivy
-    plugs: [home, network, network-bind]
+    plugs: [home, network, network-bind, dot-k8s, dot-aws]
 
 parts:
   trivy:
